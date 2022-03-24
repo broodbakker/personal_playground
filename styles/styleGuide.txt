@@ -1,0 +1,12 @@
+color
+  blue: #162F83
+  blue-9:#2F4490
+  blue-8:#45589D
+  light-blue: #C5CBE1
+  red:#FF6584
+  grey: #707070
+  light-grey: #EBEBEB
+  text-grey:#B3B8CD
+  green:#03BFCB
+header
+  big: 1.5rem
