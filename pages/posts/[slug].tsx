@@ -1,7 +1,7 @@
 //constant
 import { POSTS_CONTENT_PATH } from "../../public/constants"
 //function
-import { importMdFiles } from "../../lib/functions/posts"
+import { importMdFiles } from "../../util/functions/posts"
 
 export default function Post({ }) {
   return (
