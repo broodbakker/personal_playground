@@ -16,7 +16,6 @@ const Navbar = () => {
   const size = React.useContext(ResponsiveContext);
 
   const pad = size === "large" ? "none" : "medium"
-  console.log(pad)
   return (
     <Container background="primary" justify="center" direction="row" >
       <Box direction="row" fill="horizontal" justify="between" width={{ max: "large" }} pad={{ horizontal: pad }}  >
@@ -26,7 +25,7 @@ const Navbar = () => {
         </Box>
 
         <Box direction="row" align="center" >
-          {NAV_ROUTES.map((navRoute,index) => <Navlink navRoute={navRoute} key={index}/>)}
+          {NAV_ROUTES.map((navRoute, index) => <Navlink navRoute={navRoute} key={index} />)}
         </Box>
 
         <Box direction="row" align="center">

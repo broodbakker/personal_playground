@@ -10,22 +10,22 @@ export default function Post({ }) {
 }
 
 
-export async function getStaticPaths() {
-  const paths = importMdFiles(POSTS_CONTENT_PATH)
+// export async function getStaticPaths() {
+//   const paths = importMdFiles(POSTS_CONTENT_PATH)
 
-  return {
-    paths,
-    fallback: false
-  };
+//   return {
+//     paths,
+//     fallback: false
+//   };
 
-}
+// }
 
 
-export async function getStaticProps({ params }) {
+// export async function getStaticProps({ params }) {
 
-  return {
-    props: {
-      product: 4
-    },
-  }
-}
+//   return {
+//     props: {
+//       product: 4
+//     },
+//   }
+// }
