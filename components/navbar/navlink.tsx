@@ -1,38 +1,54 @@
+
 import React from 'react'
 import Link from "next/link"
-import { Box, ResponsiveContext } from "grommet"
+//compoents
 import { Article, UserExpert, System } from "grommet-icons"
-//typescript
-import { NavLinks } from "../../typescript"
+import { Box, Text } from "grommet"
 //styled
-import { CursorBox } from "../shared/styledComponents"
+import styled from "styled-components"
+import { CursorBox, Hover } from "../shared/styledComponents"
+//constant
+import { GLOBALSTYLE } from '../../util/constants'
+// //typescript
+import { NavLinks } from "../../typescript"
 
 const NavIcons = {
-  artikelen: <Article />,
-  projecten: <UserExpert />,
-  "over mij": <System />
+  Artikelen: <Article />,
+  Projects: <System />,
+  "Over Mij": <UserExpert />
 }
+
+const Container = styled(CursorBox)`
+  @media ${GLOBALSTYLE.breakpoint.minmobile}  {
+    flex-direction:row;
+  }
+ ${Hover}
+`
+
+const NavIconsContainer = styled(Box)`
+  @media ${GLOBALSTYLE.breakpoint.minmobile}  {
+   margin-right:0.5rem;
+  }
+`
+
 type NavLinksProps = NavLinks
 
 const NavLink = ({ navRoute }: NavLinksProps) => {
-  const size = React.useContext(ResponsiveContext);
-
-  const right = size === "small" ? "none" : "small"
-
   return (
-    <CursorBox align="center" direction={size === "small" ? "column" : "row"} margin={{ horizontal: "xsmall" }}>
-      <Box margin={right}>
+    <Container align="center" >
+      <NavIconsContainer >
         {NavIcons[navRoute.name]}
-      </Box>
+      </NavIconsContainer>
 
       <Link href={navRoute.route}>
-        <a>
-          {navRoute.name}
-        </a>
+        <Text color="fontColor" size="small" weight="bold">
+          <a>
+            {navRoute.name}
+          </a>
+        </Text>
       </Link>
-    </CursorBox>
+    </Container>
   )
 }
-
 
 export default NavLink

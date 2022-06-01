@@ -1,26 +1,29 @@
 import React from 'react'
-import Link from "next/link"
-import { ResponsiveContext } from "grommet"
 import { Menu } from "grommet-icons"
+//constant
+import { GLOBALSTYLE } from '../../util/constants'
 //styled
-import { CursorBox } from "../shared/styledComponents"
-//constants
-import { ROUTES } from "../../util/constants"
+import styled from "styled-components"
+import { CursorBox, Hover } from "../shared/styledComponents"
+
+const Container = styled(CursorBox)`
+  display:none;
+  @media ${GLOBALSTYLE.breakpoint.minmobile}  {
+    display:block;
+  }
+  & > svg {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  ${Hover}
+`
 
 const SidebarButton = () => {
-  const size = React.useContext(ResponsiveContext);
   return (
-    <>
-      {size != "small" &&
-        <CursorBox margin={{ right: "medium" }}>
-          <Link href={ROUTES.home.route}>
-            <a>
-              <Menu />
-            </a>
-          </Link>
-        </CursorBox>
-      }
-    </>
+    <Container margin={{ right: "medium" }} >
+      <Menu color="fontColor"/>
+    </Container>
   )
 }
 

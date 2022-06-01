@@ -1,26 +1,32 @@
 export const ROUTES = {
   home: { name: "home", route: "/" },
-  about: { name: "about", route: "/about" },
+  "over-mij": { name: "over mij", route: "/over-mij" },
+  artikelen: { name: "artikelen", route: "/artikelen" },
   projects: { name: "projects", route: "/projects" }
 }
 
 export const NAV_ROUTES = [
-  { name: "artikelen", route: "/artikelen" },
-  { name: "projecten", route: "/projecten" },
-  { name: "over mij", route: "/over-mij" }
+  { name: "Artikelen", route: "/artikelen" },
+  { name: "Projects", route: "/projects" },
+  { name: "Over Mij", route: "/over-mij" }
 ]
+
+export const BACKGROUND_IMAGE = './images/image4.svg'
+export const HEADER_IMAGE = './images/headPhoto.jpeg'
+export const POSTS_PATH = "./content/posts";
+export const PROJECTS_PATH = "./content/projects";
+export const GITHUB_LINK = "https://github.com/broodbakker"
 
 const size = {
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',
   mobile: "600px",
-  tablet: '1000px',
+  tablet: '800px',
   laptop: '1200px',
   laptopL: '1440px',
   desktop: '2560px'
 }
-
 
 export const GLOBALSTYLE = {
   breakpoint: {

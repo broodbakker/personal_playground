@@ -1,17 +1,26 @@
 import React from 'react'
 import Link from "next/link"
+import styled from "styled-components"
 //styled
 import { CursorBox } from "../shared/styledComponents"
 //constants
 import { ROUTES } from "../../util/constants"
+import { Hover } from '../shared/styledComponents';
+import { Text } from "grommet"
+
+const Container = styled(CursorBox)`
+ ${Hover}
+`
 
 const Logo = () =>
-  <CursorBox>
+  <Container >
     <Link href={ROUTES.home.route}>
       <a>
-        Martijn van de Ree
+        <Text color="fontColor" weight="bold" >
+          Martijn van de Ree
+        </Text>
       </a>
     </Link>
-  </CursorBox>
+  </Container>
 
 export default Logo

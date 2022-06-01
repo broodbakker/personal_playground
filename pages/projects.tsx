@@ -1,16 +1,17 @@
-function Projects() {
-  return <div>
-    <h1>projects</h1>
+import ProjectsPage from "../components/template/projectsPage";
+//constants
+import { PROJECTS_PATH } from "../util/constants"
+//functions
+import { getFiles } from "../util/functions/files"
 
-    <h2>c#</h2>
-    <h3>Console game</h3>
+function Projects({ projects }) {
+  return <ProjectsPage projects={projects} />
+}
 
-    <p>this is the link of the <a href="https://github.com/broodbakker/cSharpConsoleGame">the source</a>, it you want to play the game yourself:</p>
+export async function getStaticProps() {
+  const projects = await getFiles(PROJECTS_PATH)
 
-    <p>git clone https://github.com/broodbakker/cSharpConsoleGame.git </p>
-    <p> cd cSharpConsoleGame</p>
-    <p> npm i && npm run play</p>
-  </div>
+  return { props: { projects } }
 }
 
 export default Projects

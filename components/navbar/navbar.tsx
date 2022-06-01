@@ -1,26 +1,26 @@
 import React from 'react'
-import styled from "styled-components"
-import { Box, ResponsiveContext } from "grommet"
+import { Box } from "grommet"
+import { MaxWidth } from '../shared/styledComponents'
 //constants
 import { NAV_ROUTES } from "../../util/constants"
 //components
 import Navlink from "./navlink"
 import Logo from "./logo"
-import SidebarButton from "./sidebar_button"
-import Toolbar from "./toolbar"
+//style
+import styled from "styled-components"
 
-const Container = styled(Box)`
-  height:4em;
+const InsideContainer = styled(MaxWidth)`
+  padding-right:0.5rem;
+  padding-left:0.5rem;
 `
-const Navbar = () => {
-  const size = React.useContext(ResponsiveContext);
 
-  const pad = size === "large" ? "none" : "medium"
+const Navbar = () => {
   return (
-    <Container background="primary" justify="center" direction="row" >
-      <Box direction="row" fill="horizontal" justify="between" width={{ max: "large" }} pad={{ horizontal: pad }}  >
+    <Box background="primary" justify="center" direction="row" pad={{ vertical: "xsmall" }}
+      border={{ side: "bottom", size: "small", color: "lightBorderColor" }}  >
+      <InsideContainer direction="row" justify="between" fill="horizontal"  >
         <Box direction="row" align="center">
-          <SidebarButton />
+          {/* <SidebarButton /> */}
           <Logo />
         </Box>
 
@@ -28,11 +28,11 @@ const Navbar = () => {
           {NAV_ROUTES.map((navRoute, index) => <Navlink navRoute={navRoute} key={index} />)}
         </Box>
 
-        <Box direction="row" align="center">
+        {/* <Box direction="row" align="center">
           <Toolbar />
-        </Box>
-      </Box>
-    </Container>
+        </Box> */}
+      </InsideContainer>
+    </Box>
   )
 }
 

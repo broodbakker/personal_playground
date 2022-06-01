@@ -3,8 +3,8 @@ import { Grommet } from 'grommet';
 //component
 import { Layout } from "../components/shared/layout"
 //style
-import { GlobalStyle } from "../components/shared/global"
-import { customTheme } from "../components/shared/styles"
+import { GlobalStyle } from "../styles/global"
+import { customTheme } from "../styles/styles"
 
 const isProduction = process.env.NODE_ENV === "production";
 
