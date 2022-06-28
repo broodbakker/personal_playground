@@ -34,10 +34,9 @@ type InputProps = {
 }
 
 const SearchInput = ({ placeholder, bgColor, name }: InputProps) => {
-  const { setQuery, results, t } = useSearch()
+  const { setQuery, results } = useSearch()
   const [value, setValue] = useState("")
 
-  console.log(t, "t")
 
   const handleChange = (e) => {
     setValue(e.target.value)
