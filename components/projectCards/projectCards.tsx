@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { Box, Image, Text, Heading } from "grommet"
 import { ButtonLink } from "../shared/link"
 //typescript
-import { IProject, IProjectData } from '../../util/typescript/index';
+import { IProject,IProjectData } from '../../util/typescript/index';
 
 const Grid = styled(Box)`
  display: grid;
@@ -26,7 +26,7 @@ interface IProjectCards {
 const ProjectCards = ({ projects }: IProjectCards) => {
   return (
     <Grid>
-      {projects.map((project, index) => <Card key={index} project={project.data} />)}
+      {projects.map((project,index) => <Card key={index} project={project.data} />)}
     </Grid>
   )
 }
@@ -48,7 +48,7 @@ interface IProjectCard {
   project: IProjectData
 }
 
-const Card = ({ project }: IProjectCard) => {
+const Card = ({ project }:IProjectCard) => {
   return (
     <CardContainer background="white" pad="small" align="center" border={{ color: 'lightBorderColor', size: 'small' }}>
       <Box margin={{ vertical: "small" }}>

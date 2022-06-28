@@ -1,11 +1,11 @@
 ---
 templateKey: post.template
-title: Computers wereldwijd bedreigd door ingebouwde hardware-fout5
+title: Computers wereldwijd bedreigd door ingebouwde hardware-fout
 date: 2021-06-11T15:19:17.905Z
 subject: tech
-author: Martijn van de Ree
+author: Monique Siemsen
 tags:
-  - computer
+  - computer, hacken, processor, inbouwfout, Spectre
 image:
   - https://res.cloudinary.com/dta9vptzh/image/upload/v1602325993/dennisStassen/dennis_voor_de_klas.jpg
 ---

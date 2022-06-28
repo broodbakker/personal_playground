@@ -9,7 +9,7 @@ const InsideContainer = styled(MaxWidth)`
 `
 
 const Footer = () =>
-  <Box background="primary" justify="center" direction="row" pad={{ vertical: "small" }}
+  <F background="primary" justify="center" direction="row" pad={{ vertical: "small" }}
     border={{ side: "top", size: "small", color: "lightBorderColor" }}  >
     <InsideContainer direction="row" justify="between" fill="horizontal"  >
       <Box direction="row" align="center">
@@ -24,6 +24,6 @@ const Footer = () =>
         ©Copyright 2022
       </Box>
     </InsideContainer>
-  </Box>
+  </F>
 
 export default Footer
