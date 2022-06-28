@@ -1,0 +1,21 @@
+{
+  "name": "netliy-plugin-store-for-search",
+  "version": "1.0.0",
+  "description": "put markdown files in 1 json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "build",
+    "plugins"
+  ],
+  "author": "Martijn van de Ree",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {}
+}

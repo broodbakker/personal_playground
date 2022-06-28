@@ -8,7 +8,8 @@ import { IPost } from "../../util/typescript"
 
 export default function Post({ file }) {
   return (
-    <PostPage file={file} />
+    // <PostPage file={file} />
+    <div></div>
   )
 }
 
@@ -22,7 +23,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-
   const file: IPost = getFileBySlug(params.slug, POSTS_PATH)
 
   return {

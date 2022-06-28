@@ -15,7 +15,7 @@ export interface IPostData {
 }
 
 export interface IProject {
-  data: IPostData
+  data: IProjectData
   content: string
 }
 
@@ -29,5 +29,5 @@ export interface IProjectData {
   link: string[]
   image: string[]
   slug: string
-  description:string
+  description: string
 }
