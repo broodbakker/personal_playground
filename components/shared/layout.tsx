@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 import { Box } from "grommet"
 import Navbar from "../navbar"
+import Footer from "../footer"
 //styled components
 import { SelectedText } from "../shared/styledComponents"
 //constants
@@ -56,6 +57,12 @@ const NavbarContainer = styled.div`
   z-index:1;
 `
 
+const FooterContainer = styled.div`
+  width:100%;
+  bottom:0;
+  z-index:1;
+`
+
 export const Layout = ({ children }) => {
   return (
     <SelectedText>
@@ -67,6 +74,11 @@ export const Layout = ({ children }) => {
         <Container>
           {children}
         </Container>
+
+        <FooterContainer>
+          <Footer />
+        </FooterContainer>
+
       </RelativeBox>
     </SelectedText>
   )

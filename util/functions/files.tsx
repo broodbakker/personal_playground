@@ -9,8 +9,9 @@ export const importMdFiles = (filePath: string) => fs
   // Map the path into the static paths object required by Next.js
   .map((slug) => ({ params: { slug } }));
 
-
 export const getFiles = (path: string) => importSlugs(path).map((slug) => getFileBySlug(slug, path))
+
+export const getFilesForSearchIndex = (path: string) => importSlugs(path).map((slug) => getFileBySlug(slug, path))
 
 export const getFilesAmount = (path: string, amountOfFiles: number) => getFiles(path).slice(-amountOfFiles);
 

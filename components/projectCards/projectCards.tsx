@@ -5,6 +5,8 @@ import { GLOBALSTYLE } from '../../util/constants'
 import styled from "styled-components"
 import { Box, Image, Text, Heading } from "grommet"
 import { ButtonLink } from "../shared/link"
+//typescript
+import { IProject,IProjectData } from '../../util/typescript/index';
 
 const Grid = styled(Box)`
  display: grid;
@@ -16,10 +18,15 @@ const Grid = styled(Box)`
      grid-template-columns: repeat(3, 1fr);
   }
 `
-const ProjectCards = ({ projects }) => {
+
+interface IProjectCards {
+  projects: IProject[]
+}
+
+const ProjectCards = ({ projects }: IProjectCards) => {
   return (
     <Grid>
-      {projects.map((project) => <Card project={project.data} />)}
+      {projects.map((project,index) => <Card key={index} project={project.data} />)}
     </Grid>
   )
 }
@@ -37,7 +44,11 @@ const ImageBox = styled(Box)`
   overflow: hidden;
 `
 
-const Card = ({ project }) => {
+interface IProjectCard {
+  project: IProjectData
+}
+
+const Card = ({ project }:IProjectCard) => {
   return (
     <CardContainer background="white" pad="small" align="center" border={{ color: 'lightBorderColor', size: 'small' }}>
       <Box margin={{ vertical: "small" }}>
@@ -48,7 +59,7 @@ const Card = ({ project }) => {
         border={{ size: "small", color: "lightBorderColor" }}>
         <Image
           fit="cover"
-          src={project.image}
+          src={project.image[0]}
         />
       </ImageBox>
 
@@ -64,8 +75,6 @@ const Card = ({ project }) => {
         </Text>
 
       </Box>
-
-
 
     </CardContainer>
   )

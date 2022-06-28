@@ -6,6 +6,8 @@ import { GLOBALSTYLE } from '../../../util/constants'
 import styled, { css } from "styled-components"
 import { Box } from "grommet"
 import { normalizeColor } from "grommet/utils";
+//typescript
+import { IPost } from "../../../util/typescript"
 
 const Container = styled(Box)`
   padding-right:0.5rem;
@@ -27,7 +29,6 @@ const Block = styled.blockquote`
   padding:1rem;
 `
 
-
 const StylingPost = styled.div`
     * > p {
       margin-bottom:1rem;
@@ -46,9 +47,6 @@ const StylingPost = styled.div`
       font-style: italic;
       font-weight:500;
     }
-
-
-
     * > a {
         cursor:pointer;
         color: green;
@@ -85,7 +83,11 @@ const StylingPost = styled.div`
     }
 `
 
-const Main = ({ file }) => {
+interface IMain {
+  file: IPost
+}
+
+const Main = ({ file }: IMain) => {
   return (
     <Box align="center" pad={{ vertical: "medium" }}>
       <Container width={{ max: "large" }}>

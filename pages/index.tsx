@@ -7,14 +7,13 @@ import { getFilesAmount } from "../util/functions/files"
 
 function Home({ posts, projects }) {
   return (
-    <>
-      <HomePage posts={posts} projects={projects} />
-    </>)
+    <HomePage posts={posts} projects={projects} />
+  )
 }
 
 export async function getStaticProps() {
-  const posts = await getFilesAmount(POSTS_PATH, 2)
-  const projects = await getFilesAmount(PROJECTS_PATH, 2)
+  const posts = await getFilesAmount(POSTS_PATH, 6)
+  const projects = await getFilesAmount(PROJECTS_PATH, 4)
 
   return { props: { posts, projects } }
 }

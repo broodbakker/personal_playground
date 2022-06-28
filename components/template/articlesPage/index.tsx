@@ -17,7 +17,7 @@ const ArticlesPage = ({ posts }) =>
       <Header />
     </Box>
     <Box margin={{ bottom: "medium" }}>
-      <BasicTable title="Laatste artikelen" posts={posts} path="./post" />
+      <BasicTable title="Laatste artikelen" posts={posts} path="./artikelen" />
     </Box>
   </Container >
 

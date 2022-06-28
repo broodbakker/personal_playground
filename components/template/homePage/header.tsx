@@ -79,9 +79,8 @@ const Header = () => {
           </Box>
         </Box>
 
-
         <Box direction="row">
-          <Link href={ROUTES["over-mij"].name}>
+          <Link href={ROUTES["over-mij"].route}>
             <Box direction="row" margin={{ right: "small" }}>
               <Yoga color='primary1' />
               <Text1 margin={{ left: "xsmall" }} color="lightFontColor" weight="100">meer over mij</Text1>

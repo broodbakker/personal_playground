@@ -27,10 +27,6 @@ const Navbar = () => {
         <Box direction="row" align="center" >
           {NAV_ROUTES.map((navRoute, index) => <Navlink navRoute={navRoute} key={index} />)}
         </Box>
-
-        {/* <Box direction="row" align="center">
-          <Toolbar />
-        </Box> */}
       </InsideContainer>
     </Box>
   )

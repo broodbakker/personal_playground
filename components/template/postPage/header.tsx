@@ -1,29 +1,55 @@
 import React from 'react'
 //styles
 import styled from "styled-components"
-import { Box, Text, Heading } from "grommet"
-import { BasicLink } from "../../shared/link"
-
+import { Box, Text, Heading, Image } from "grommet"
+import { ButtonLink } from "../../shared/link"
+//typescript
+import { IPostData } from "../../../util/typescript"
 
 const BoxCard = styled(Box)`
   gap:0.5rem;
 `
 
-const Header = ({ data }:any) => {
+const BoxImage = styled(Box)`
+  aspect-ratio: 3 / 2;
+  border-radius:0.25rem;
+`
+
+const TextItalic = styled(Text)`
+ font-style: italic;
+`
+
+interface IHeader {
+  data: IPostData
+}
+
+const Header = ({ data }: IHeader) => {
   return (
     <>
-      <Box margin={{ bottom: "small" }}
-      >
-        <Text textAlign='center'>Written by Tania Rascia on January 31, 2022  <BasicLink href="/">n GitHub.</BasicLink> </Text>
+      <Box margin={{ bottom: "small" }} >
+        <Text textAlign='center'>{`Geschreven door ${data.author} op `}
+          <TextItalic weight="lighter"> {data.date}</TextItalic>
+        </Text>
       </Box>
 
-      <Box margin={{ bottom: "small" }} >
-        {/* <Heading level="1" size="small" textAlign='center'>{data.title}</Heading> */}
+      <Box align="center">
+        <BoxImage width={{ max: "medium" }} >
+          <Image
+            fit="cover"
+            src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg"
+
+          />
+        </BoxImage>
       </Box>
+
+      <Box margin={{ vertical: "medium" }} >
+        <Heading level="1" size="small" textAlign='center'>{data.title}</Heading>
+      </Box>
+
 
       <Box margin={{ bottom: "small" }} >
         <BoxCard direction="row" justify="center" margin={{ vertical: "small" }} fill="horizontal">
-          {/* {data.tags.map((tag) =>   <ButtonLink href="/">{tag}</ButtonLink>)} */}
+          {data.tags.map((tag, index) => <ButtonLink key={index} href="/">{tag}</ButtonLink>)}
         </BoxCard>
       </Box>
     </ >

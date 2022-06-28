@@ -15,10 +15,12 @@
     "component-library-martijn": "^1.0.4",
     "gray-matter": "^4.0.3",
     "grommet": "^2.22.0",
+    "lunr": "^2.3.9",
     "matter": "^0.2.0",
     "next": "^12.1.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-lunr": "^1.1.0",
     "react-markdown": "^8.0.2",
     "styled-components": "^5.3.5"
   },

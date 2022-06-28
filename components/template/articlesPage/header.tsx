@@ -18,7 +18,7 @@ const Header = () => {
         </Box>
       </Box >
 
-      <Searchbar placeholder='Begin met typen om te zoeken..' value="" handleChange={() => { }}
+      <Searchbar placeholder='Begin met typen om te zoeken..'
         bgColor="light" name="search"
       />
     </>
