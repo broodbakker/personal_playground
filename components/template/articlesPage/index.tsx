@@ -22,7 +22,6 @@ const ArticlesPage = ({ posts }) => {
   useEffect(() => {
   }, [results])
 
-
   return (
     <Container alignSelf="center" height={{ min: "100vh" }} >
       <Box margin={{ vertical: "xlarge" }}>

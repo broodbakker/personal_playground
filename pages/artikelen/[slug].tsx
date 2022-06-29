@@ -6,34 +6,34 @@ import { importMdFiles, getFileBySlug } from "../../util/functions/files"
 //typescript
 import { IPost } from "../../util/typescript"
 
-export default function Post({ file }: any) {
-  console.log("data", file)
+const Artikelen = (props) => {
   return (
-    <PostPage file={file} />
+    <>
+      <PostPage file={props.file} />
+    </>
+
   )
 }
 
 export async function getStaticPaths() {
   const paths = importMdFiles(POSTS_PATH)
 
-
-
   return {
     paths,
-    fallback: true
+    fallback: false
   };
 }
 
 export async function getStaticProps({ params }) {
+  const file1: IPost = await getFileBySlug(params.slug, POSTS_PATH)
 
-  console.log(params, "test")
+  const file = JSON.parse(JSON.stringify(file1));
 
-  const file: IPost = await getFileBySlug(params.slug, POSTS_PATH)
-
-  console.log("file", file.data)
   return {
     props: {
       file
     },
   }
 }
+
+export default Artikelen

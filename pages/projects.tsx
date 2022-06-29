@@ -11,7 +11,9 @@ function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projects: IProject[] = await getFiles(PROJECTS_PATH)
+  const projects1 = await getFiles(PROJECTS_PATH)
+
+  const projects = JSON.parse(JSON.stringify(projects1));
 
   return { props: { projects } }
 }

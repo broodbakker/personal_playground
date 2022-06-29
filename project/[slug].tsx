@@ -1,8 +1,8 @@
 //constant
-import ProjectPage from "../../components/template/postPage";
-import { PROJECTS_PATH } from "../../util/constants"
+// import ProjectPage from "../components/template/postPage";
+import { PROJECTS_PATH } from "../util/constants"
 //function
-import { importMdFiles, getFileBySlug } from "../../util/functions/files"
+import { importMdFiles, getFileBySlug } from "../util/functions/files"
 
 export default function Project({ file }) {
 
