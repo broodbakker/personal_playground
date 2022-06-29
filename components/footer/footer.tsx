@@ -14,7 +14,7 @@ const Footer = () =>
     <InsideContainer direction="row" justify="between" fill="horizontal"  >
       <Box direction="row" align="center">
 
-        <Text color="fontColor" weight="bold" margin={{ right: "small" }} >
+        <Text color="fontColor" weight={900} margin={{ right: "small" }} >
           Gemaakt door: Martijn van de Ree
         </Text>
         < DeployIcon color="fontColor" size="medium" />

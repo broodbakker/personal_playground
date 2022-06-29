@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { Dispatch } from 'react'
 //styles
 import { Box, Text, Heading } from "grommet"
 //components
-import { LinkUnderline } from "../../shared/link"
 import Searchbar from "../../../components/searchbar"
 
-const Header = () => {
+interface Iheader {
+  handleSearch: Dispatch<any>
+  value: string
+}
+const Header = ({ handleSearch, value }: Iheader) => {
   return (
     <>
       <Box align='center'>
@@ -19,7 +22,8 @@ const Header = () => {
       </Box >
 
       <Searchbar placeholder='Begin met typen om te zoeken..'
-        bgColor="light" name="search"
+        bgColor="light" name="search" handleSearch={handleSearch}
+        value={value}
       />
     </>
 

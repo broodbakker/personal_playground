@@ -32,6 +32,24 @@ const LatestPosts = ({ posts, title, path, more }: LatestPostsProps) => {
   )
 }
 
+export const LatestSearchTable = ({ posts, title, path, more }: any) => {
+  return (
+    <Box fill="horizontal">
+      <Box direction="row" justify="between" pad={{ bottom: "xsmall" }}
+        margin={{ bottom: "small" }} border={{ color: 'lightBorderColor', size: 'xsmall', side: "bottom" }}>
+        <Heading level="2" size="small" color="headingColor" >Zoek Resultaten:</Heading>
+        <LinkUnderline href={path}>
+          <Box>{more}</Box>
+        </LinkUnderline>
+      </Box>
+
+      <Box>
+        {posts.map((post, index) => <LatestPost key={index} title={post.title} date={post.date} path={post.href} />)}
+      </Box>
+    </Box>
+  )
+}
+
 const PostContainer = styled(CursorBox)`
   border-radius:0.5rem;
   ${props => css`

@@ -6,15 +6,17 @@ import { importMdFiles, getFileBySlug } from "../../util/functions/files"
 //typescript
 import { IPost } from "../../util/typescript"
 
-export default function Post({ file }) {
+export default function Post({ file }: any) {
+  console.log("data", file)
   return (
-    // <PostPage file={file} />
-    <div>test</div>
+    <PostPage file={file} />
   )
 }
 
 export async function getStaticPaths() {
   const paths = importMdFiles(POSTS_PATH)
+
+
 
   return {
     paths,
@@ -24,8 +26,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-  const file: IPost = getFileBySlug(params.slug, POSTS_PATH)
+  console.log(params, "test")
 
+  const file: IPost = await getFileBySlug(params.slug, POSTS_PATH)
+
+  console.log("file", file.data)
   return {
     props: {
       file

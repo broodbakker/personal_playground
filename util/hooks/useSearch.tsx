@@ -1,17 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useLunr } from 'react-lunr'
 import lunr from "lunr";
-//constants
+//data
 //function
+import { createStore } from "../../util/functions"
 import data from "../../content/searchData.json"
 
 const index = lunr(function () {
-  this.field("title");
-  this.field("body");
-  this.field("subject");
-  this.field("tags")
-  this.field("content")
-  this.field("id");
+  this.field('title', {
+    boost: 50
+  })
+  this.field('subject', {
+    boost: 50
+  })
+  this.field("content");
   data.forEach(({ data: { title }, content, }) => {
     this.add({
       content,
@@ -21,15 +23,10 @@ const index = lunr(function () {
   })
 });
 
-const createStore = (posts) => posts.reduce((acc, post) => {
-  let { data: { title } } = post;
-  return { ...acc, [title]: { title } };
-}, {});
-
 
 export const useSearch = () => {
-  const [query, setQuery] = useState(null)
+  const [query, setQuery] = useState("")
   const results = useLunr(query, index, createStore(data))
 
-  return { setQuery, results, }
+  return { setQuery, results, query }
 }

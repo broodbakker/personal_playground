@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-  const file = getFileBySlug(params.slug, PROJECTS_PATH)
+  const file = await getFileBySlug(params.slug, PROJECTS_PATH)
 
   return {
     props: {

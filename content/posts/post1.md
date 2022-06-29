@@ -1,6 +1,6 @@
 ---
 templateKey: post.template
-title: Computers wereldwijd bedreigd door ingebouwde hardware-fout
+title:  post1
 date: 2021-06-11T15:19:17.905Z
 subject: tech
 author: Martijn van de Ree

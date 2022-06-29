@@ -1,6 +1,6 @@
 ---
 templateKey: post.template
-title: Computers wereldwijd bedreigd door ingebouwde hardware-fout
+title: post2
 date: 2021-06-11T15:19:17.905Z
 subject: tech
 author: Monique Siemsen

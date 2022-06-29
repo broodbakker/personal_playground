@@ -13,16 +13,18 @@ const Container = styled(MaxWidth)`
 `
 
 interface IPostPage {
-  file: IPost
+  file: any
 }
 
 const PostPage = ({ file }: IPostPage) => {
+  // const d = file.data
+
   return (
     <Container alignSelf="center" margin={{ bottom: "large" }}>
       <Box margin={{ top: "large", }}>
-        <Header data={file.data} />
+        {/* <Header data={file} /> */}
       </Box>
-      <Main file={file} />
+      {/* <Main file={file} /> */}
     </Container>
   )
 }

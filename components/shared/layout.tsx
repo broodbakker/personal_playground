@@ -17,7 +17,7 @@ const RelativeBox = styled(Box)`
 
 const AbsoluteBox = styled(Box)`
   //image
-  content:"";
+  content: "";
   position:absolute;
   width:100%;
   height:100%;
@@ -46,7 +46,7 @@ const AbsoluteBox = styled(Box)`
     width:100%;
     height:100%;
     background: white;
-    opacity:0.85;
+    opacity:0.95;
   }
 `
 
@@ -63,11 +63,12 @@ const FooterContainer = styled.div`
   z-index:1;
 `
 
+//'https://res.cloudinary.com/dta9vptzh/image/upload/v1655718212/lauren/lauren2.jpg
 export const Layout = ({ children }) => {
   return (
     <SelectedText>
       <RelativeBox>
-        <AbsoluteBox background={`url(${BACKGROUND_IMAGE})`} />
+        <AbsoluteBox background={`url(https://res.cloudinary.com/dta9vptzh/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1656493445/martijn_playground/image4.svg)`} />
         <NavbarContainer>
           <Navbar />
         </NavbarContainer>

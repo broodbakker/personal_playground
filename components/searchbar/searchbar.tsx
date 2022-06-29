@@ -1,12 +1,10 @@
 
-import React, { useState } from 'react'
+import React, { Dispatch } from 'react'
 //styles
 import styled, { css } from "styled-components"
 import { TextInput } from "grommet"
 import { normalizeColor } from "grommet/utils";
 import { Search } from 'grommet-icons';
-//hooks
-import { useSearch } from "../../util/hooks/useSearch"
 
 const SearchContainer = styled(TextInput)`
   border-radius:0;
@@ -31,30 +29,22 @@ type InputProps = {
   bgColor?: string
   name: string
   type?: string
+  value: string
+  handleSearch: Dispatch<any>
 }
 
-const SearchInput = ({ placeholder, bgColor, name }: InputProps) => {
-  const { setQuery, results } = useSearch()
-  const [value, setValue] = useState("")
-
-
-  const handleChange = (e) => {
-    setValue(e.target.value)
-    setQuery(e.target.value)
-
-  }
+const SearchInput = ({ placeholder, bgColor, name, value, handleSearch }: InputProps) => {
   return (
     <>
       <SearchContainer
         placeholder={placeholder}
         value={value}
-        onChange={handleChange}
+        onChange={handleSearch}
         icon={<Search />}
         bgColor={bgColor}
         name={name}
         size="medium"
       />
-      <div>{`Test: ${results}`}</div>
     </>
   );
 }
