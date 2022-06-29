@@ -22,7 +22,7 @@ const PostPage = ({ file }: IPostPage) => {
   return (
     <Container alignSelf="center" margin={{ bottom: "large" }}>
       <Box margin={{ top: "large", }}>
-        {/* <Header data={file} /> */}
+        <Header data={file} />
       </Box>
       {/* <Main file={file} /> */}
     </Container>
