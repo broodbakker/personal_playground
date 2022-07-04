@@ -45,6 +45,7 @@ const Header = () => {
         <Image
           fit="cover"
           src={HEADER_IMAGE}
+          alt={"Martijn van de Ree"}
         />
       </ImageBox>
 

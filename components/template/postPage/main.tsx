@@ -93,7 +93,9 @@ const Main = ({ file }: IMain) => {
       <Container width={{ max: "large" }}>
 
         <StylingPost>
-          <ReactMarkdown children={file.content} />
+          <ReactMarkdown>
+            {file.content}
+          </ReactMarkdown>
         </StylingPost>
 
       </Container>

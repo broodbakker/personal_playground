@@ -2,9 +2,15 @@
 // import ProjectPage from "../components/template/postPage";
 import { PROJECTS_PATH } from "../util/constants"
 //function
-import { importMdFiles, getFileBySlug } from "../util/functions/files"
+import { importMdFiles, getProjectFileBySlug } from "../util/functions/files"
+//typescript
+import { IProject } from "../util/typescript"
 
-export default function Project({ file }) {
+interface IArticle {
+  file: IProject,
+}
+
+export default function Project({ file }: IArticle) {
 
   return (
     // <ProjectPage file={file} />
@@ -23,7 +29,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-  const file = await getFileBySlug(params.slug, PROJECTS_PATH)
+  const file = await getProjectFileBySlug(params.slug, PROJECTS_PATH)
 
   return {
     props: {

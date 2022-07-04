@@ -35,14 +35,14 @@ const Main = () => {
         {/* opening */}
 
         {/* inspiration */}
-        <Text margin={{ bottom: "medium" }}>Hey, Ik ben Martijn! I'm a software engineer working in Chicago. Welcome to my spot on the web for projects I've created, tutorials I've written, musings, and anything else I want to show the world.</Text>
+        <Text margin={{ bottom: "medium" }}>Hey, Ik ben Martijn! a software engineer working in Chicago. Welcome to my spot on the web for projects created, tutorials written, musings, and anything else I want to show the world.</Text>
 
         <Text margin={{ bottom: "medium" }}>
-          My site has no ads, no affiliate links, no tracking or analytics, no sponsored posts, and no paywall. My only motivation for this site is to share what I've learned with the world and document notes for myself, and hopefully connect with a few people.
+          My site has no ads, no affiliate links, no tracking or analytics, no sponsored posts, and no paywall. My only motivation for this site is to share what learned with the world and document notes for myself, and hopefully connect with a few people.
         </Text>
 
         <Text >
-          Check out the projects page to see a highlight of the open-source <LinkUnderline href="/">projects</LinkUnderline> I've made, and articles to see everything I've written. I've also written external <LinkUnderline href="/">public</LinkUnderline>  for DigitalOcean, Envato Tuts+, etc. and done a few speaking engagements and podcasts, which you can find below.
+          Check out the projects page to see a highlight of the open-source <LinkUnderline href="/">projects</LinkUnderline> made, and articles to see everything also written external <LinkUnderline href="/">public</LinkUnderline>  for DigitalOcean, Envato Tuts+, etc. and done a few speaking engagements and podcasts, which you can find below.
         </Text>
       </Box>
 
@@ -57,7 +57,7 @@ const Main = () => {
       {/* songs */}
       <Box margin={{ vertical: "medium" }} >
         <Box margin={{ bottom: "small" }}>
-          <Heading level="3" size="small">What I'm doing now</Heading>
+          <Heading level="3" size="small">What  doing now</Heading>
         </Box>
 
         <Box margin={{ bottom: "small" }}>
@@ -66,7 +66,7 @@ const Main = () => {
 
         <Box margin={{ bottom: "small" }}>
           <List>
-            <li><Text color="primary">Staying inside because it's too cold</Text></li>
+            <li><Text color="primary">Staying inside because s too cold</Text></li>
             <li><Text color="primary">Looking for new video games to play</Text></li>
             <li><Text color="primary">Working at <LinkUnderline href="https://www.balto.ai/">Balto AI</LinkUnderline> </Text></li>
             <li><Text color="primary">Writing about GraphQL</Text></li>
@@ -76,7 +76,7 @@ const Main = () => {
 
         <Box >
           <List>
-            <li><Text color="primary">Staying inside because it's too cold</Text></li>
+            <li><Text color="primary">Staying inside becauses too cold</Text></li>
             <li><Text color="primary">Looking for new video games to play</Text></li>
             <li><Text color="primary">Working at <LinkUnderline href="https://www.balto.ai/">Balto AI</LinkUnderline> </Text></li>
             <li><Text color="primary">Writing about GraphQL</Text></li>
@@ -96,7 +96,7 @@ const Main = () => {
 
         <Box >
           <List>
-            <li><BasicLink test href="/" ><Text color="primary">Staying inside because it's too cold</Text></BasicLink></li>
+            <li><BasicLink test href="/" ><Text color="primary">Staying inside becausetoo cold</Text></BasicLink></li>
             <li><BasicLink href="/"><Text color="primary">Looking for new video games to play
             </Text>
             </BasicLink></li>
@@ -105,7 +105,7 @@ const Main = () => {
 
         <Box margin={{ bottom: "small" }}>
           <List>
-            <li><Text color="primary">Staying inside because it's too cold</Text></li>
+            <li><Text color="primary">Staying inside becaustoo cold</Text></li>
             <li><Text color="primary">Looking for new video games to play</Text></li>
             <li><Text color="primary">Working at <LinkUnderline href="https://www.balto.ai/">Balto AI</LinkUnderline> </Text></li>
             <li><Text color="primary">Writing about GraphQL</Text></li>
@@ -122,7 +122,7 @@ const Main = () => {
 
         <Box margin={{ bottom: "small" }}>
           <List>
-            <li><Text color="primary">Staying inside because it's too cold</Text></li>
+            <li><Text color="primary">Staying inside becausoo cold</Text></li>
             <li><Text color="primary">Looking for new video games to play</Text></li>
             <li><Text color="primary">Working at <BasicLink href="https://www.balto.ai/">Balto AI</BasicLink> </Text></li>
             <li><Text color="primary">Writing about GraphQL</Text></li>
@@ -132,7 +132,7 @@ const Main = () => {
 
         <Blockquote>
           <Text>
-            Tania writes extremely clear, concise tutorials. It's no exaggeration to say that I wouldn't currently have a job in development without this site. So thanks for ruining my life, Tania.
+            Tania writes extremely clear, concise tutorialsrrently have a job in development without this site. So thanks for ruining my life, Tania.
           </Text>
         </Blockquote>
       </Box>

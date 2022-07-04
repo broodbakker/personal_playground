@@ -60,6 +60,7 @@ const Card = ({ project }: IProjectCard) => {
         <Image
           fit="cover"
           src={project.image[0]}
+          alt={project.title}
         />
       </ImageBox>
 
