@@ -11,7 +11,7 @@ const InsideContainer = styled(MaxWidth)`
 const Footer = () =>
   <Box background="primary" justify="center" direction="row" pad={{ vertical: "small" }}
     border={{ side: "top", size: "small", color: "lightBorderColor" }}  >
-    <InsideContainer direction="row" justify="between" fill="horizontal"  >
+    <InsideContainer direction="row" justify="between" fill="horizontal" margin={{ horizontal: "small" }}>
       <Box direction="row" align="center">
 
         <Text color="fontColor" weight={900} margin={{ right: "small" }} >

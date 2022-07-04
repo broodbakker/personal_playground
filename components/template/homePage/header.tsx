@@ -70,11 +70,11 @@ const Header = () => {
           {/* Om mijn progressie bij te houden en ik schrijf veel maar laat het nooit zien. Ik hoop hier verandering in te brengen */}
           {/* Ik hoop dat ik wat lees plezier kan geven aan iedereen en volg mij op mijn ondtekkingsreis! */}
           <Text size="large">Ik ben een software ontwikkelaar. Leuk dat je een kijkje neemt op mijn site!
-            Dit is mijn digitale bibliotheek. Hier zijn mijn<LinkUnderline href="/"> projecten </LinkUnderline>en<LinkUnderline href="/"> artikelen </LinkUnderline> te vinden die ik schrijf in mijn vrije tijd, met als doel om mijn eigen progressie beter bij te houden en niet zo bang te zijn om dingen online te zetten omdat ze voor mijn gevoel nooit af zijn.
+            Dit is mijn digitale bibliotheek. Hier zijn mijn <LinkUnderline href="/">projecten</LinkUnderline> en <LinkUnderline href="/">artikelen</LinkUnderline> te vinden die ik schrijf in mijn vrije tijd, met als doel om mijn eigen progressie beter bij te houden en niet zo bang te zijn om dingen online te zetten omdat ze voor mijn gevoel nooit af zijn.
           </Text>
           <Box margin={{ top: "small" }}>
             <Text size="large">
-              Volg mij op mijn ondtekkingsreis. Ik hoop dat ik jullie wat lees plezier kan geven en misschien steek je er wat van op.
+              Volg mij op mijn ontdekkingsreis. Ik hoop dat ik jullie wat lees plezier kan geven en misschien steek je er wat van op.
             </Text>
           </Box>
         </Box>

@@ -1,11 +1,12 @@
 ---
-templateKey: post.template
 title: post2
 date: 2021-06-11T15:19:17.905Z
 subject: tech
 author: Monique Siemsen
 tags:
-  - computer, hacken, processor, inbouwfout, Spectre
+  - computer
+  - tech
+  - auto
 image:
   - https://res.cloudinary.com/dta9vptzh/image/upload/v1602325993/dennisStassen/dennis_voor_de_klas.jpg
 ---

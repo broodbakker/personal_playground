@@ -4,14 +4,13 @@ export interface IPost {
 }
 
 export interface IPostData {
-  templateKey: string
   title: string
-  date: string
+  date: Date
   subject: string
   author: string
   tags: string[]
-  image: string[]
-  slug: string
+  image: string
+  content: string
 }
 
 export interface IProject {

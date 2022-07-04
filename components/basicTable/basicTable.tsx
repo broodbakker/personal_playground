@@ -6,9 +6,11 @@ import { normalizeColor } from "grommet/utils";
 import { LinkUnderline } from "../shared/link"
 import { CursorBox } from '../shared/styledComponents';
 import Link from "../shared/link"
+//typescript
+import { IPost, IProject } from "../../util/typescript"
 
 type LatestPostsProps = {
-  posts: any
+  posts: IPost[] | IProject[]
   title: string
   path: string
   more?: string

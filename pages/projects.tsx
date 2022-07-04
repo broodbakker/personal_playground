@@ -2,18 +2,21 @@ import ProjectsPage from "../components/template/projectsPage";
 //constants
 import { PROJECTS_PATH } from "../util/constants"
 //functions
-import { getFiles } from "../util/functions/files"
+import { getProjectFiles } from "../util/functions/files"
 //typescript
 import { IProject } from '../util/typescript/index';
 
-function Projects({ projects }) {
+
+interface IProjects {
+  projects: IProject[],
+}
+function Projects({ projects }: IProjects) {
   return <ProjectsPage projects={projects} />
 }
 
 export async function getStaticProps() {
-  const projects1 = await getFiles(PROJECTS_PATH)
+  const projects = await getProjectFiles(PROJECTS_PATH)
 
-  const projects = JSON.parse(JSON.stringify(projects1));
 
   return { props: { projects } }
 }

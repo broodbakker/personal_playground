@@ -7,12 +7,20 @@ import { MaxWidth } from '../../shared/styledComponents'
 import styled from "styled-components"
 //constants
 import { ROUTES } from "../../../util/constants"
+//typescript
+import { IPost, IProject } from "../../../util/typescript"
 
 const Container = styled(MaxWidth)`
   padding-right:0.5rem;
   padding-left:0.5rem;
 `
-const HomePage = ({ posts, projects }) => {
+
+interface IHomePage {
+  posts: IPost[],
+  projects: IProject[]
+}
+
+const HomePage = ({ posts, projects }: IHomePage) => {
   return (
     <Container alignSelf="center" >
       <Box margin={{ vertical: "large" }}>

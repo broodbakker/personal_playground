@@ -3,26 +3,33 @@ import { useLunr } from 'react-lunr'
 import lunr from "lunr";
 //data
 //function
-import { createStore } from "../../util/functions"
+import { createStore, joinArray } from "../../util/functions"
+
 import data from "../../content/searchData.json"
 
 const index = lunr(function () {
   this.field('title', {
-    boost: 50
+    boost: 10
   })
   this.field('subject', {
-    boost: 50
+    boost: 5
   })
-  this.field("content");
-  data.forEach(({ data: { title }, content, }) => {
+  this.field('tags', {
+    boost: 5
+  })
+  this.field('content', {
+    boost: 1
+  })
+  data.forEach(({ data: { title, tags,subject }, content, }) => {
     this.add({
       content,
       title,
-      id: title
+      subject,
+      id: title,
+      tags:joinArray(tags)
     })
   })
 });
-
 
 export const useSearch = () => {
   const [query, setQuery] = useState("")

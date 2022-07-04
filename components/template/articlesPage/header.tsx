@@ -17,7 +17,7 @@ const Header = ({ handleSearch, value }: Iheader) => {
         </Box>
 
         <Box margin={{ bottom: "medium" }}>
-          <Text textAlign='center' size="large">Tutorials, artikelen, projectenm code snippets en alle andere dingen die in mij opkomen om over te schrijven. </Text>
+          <Text textAlign='center' size="large">Uitleg, artikelen, projecten, code snippets en alle andere dingen die in mij opkomen om over te schrijven.</Text>
         </Box>
       </Box >
 

@@ -23,8 +23,6 @@ interface IHeader {
 }
 
 const Header = ({ data }: IHeader) => {
-  console.log(data)
-  console.log(data.tags)
   return (
     <>
       <Box margin={{ bottom: "small" }} >
