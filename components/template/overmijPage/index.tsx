@@ -1,6 +1,6 @@
 import Header from "./header"
 import Main from "./main"
-import {Box} from "grommet"
+import { Box } from "grommet"
 //style
 import { MaxWidth } from '../../shared/styledComponents'
 import styled from "styled-components"
@@ -12,8 +12,8 @@ const Container = styled(MaxWidth)`
 
 const ArticlesPage = () =>
   <Container alignSelf="center">
-    <Box margin={{ vertical: "large" }}>
-     <Header />
+    <Box margin={{ top: "large" }}>
+      <Header />
     </Box>
     <Main />
   </Container>

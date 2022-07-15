@@ -20,7 +20,7 @@ function Home({ posts, projects }: IHome) {
 export async function getStaticProps() {
   const posts = await getArticlesByAmount(POSTS_PATH, 6)
 
-  const projects = await getProjectsByAmount(PROJECTS_PATH, 4)
+  const projects = await getProjectsByAmount(PROJECTS_PATH, 6)
 
   return { props: { posts, projects } }
 }

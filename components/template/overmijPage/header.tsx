@@ -13,7 +13,7 @@ const Header = () => {
 
       <Box margin={{ bottom: "medium" }}
       >
-        <Text textAlign='center' size="large">Software engineer, open-sourcerer, and lead singer of Floppy and the Diskettes</Text>
+        {/* <Text textAlign='center' size="large">Software developer, open-sourcerer, and lead singer of Floppy and the Diskettes</Text> */}
       </Box>
     </Box >
   )

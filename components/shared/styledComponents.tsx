@@ -25,6 +25,19 @@ export const Link = styled.a`
   `}
 `
 
+export const LinkUnderline1 = styled.a`
+  font-weight:600;
+  padding-top:0.25rem;
+  ${props => css`
+      border-bottom: 2px solid ${normalizeColor("secondary", props.theme)};
+      color: ${normalizeColor("primary", props.theme)};
+      &:hover {
+        background-color:${normalizeColor("secondary", props.theme)};
+        color:white;
+    }
+  `}
+`
+
 export const LinkUnderline = styled(Link)`
   font-weight:600;
   padding-top:0.25rem;

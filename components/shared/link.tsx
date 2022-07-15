@@ -40,7 +40,6 @@ export const BasicLink = ({ children, href, test }: AProps) => {
   )
 }
 
-
 const Box1 = styled(CursorBox)`
   border-radius:0.5rem;
   ${props => css`
@@ -58,7 +57,7 @@ const Box1 = styled(CursorBox)`
 export const ButtonLink = ({ children, href }: AProps) =>
   <a href={href}>  <Box1 background="white" color="secondary" border={{ color: 'lightBorderColor', size: 'xsmall' }}
     pad={{ horizontal: "small", vertical: "xxsmall" }}>
-    <Text color="fontColor1" weight="bold">{children}</Text>
+    <Text color="fontColor1" weight={900}>{children}</Text>
   </Box1></a>
 
 
@@ -70,7 +69,7 @@ export const Tag = ({ children }: TagProps) =>
   <Box1 background="white" color="secondary"
     border={{ color: 'lightBorderColor', size: 'xsmall' }}
     pad={{ horizontal: "small", vertical: "xxsmall" }}>
-    <Text color="fontColor1" weight="bold">{children}</Text>
+    <Text color="fontColor1" weight={900}>{children}</Text>
   </Box1>
 
 export default LinkComponent

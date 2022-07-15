@@ -49,6 +49,8 @@ interface IProjectCard {
 }
 
 const Card = ({ project }: IProjectCard) => {
+
+
   return (
     <CardContainer background="white" pad="small" align="center" border={{ color: 'lightBorderColor', size: 'small' }}>
       <Box margin={{ vertical: "small" }}>
@@ -65,9 +67,12 @@ const Card = ({ project }: IProjectCard) => {
       </ImageBox>
 
       <BoxCard direction="row" justify="center" margin={{ vertical: "small" }} fill="horizontal">
-        <ButtonLink href={project.link[0]}>Code</ButtonLink>
-        <ButtonLink href={project.link[1]}>Demo</ButtonLink>
-        <ButtonLink href={project.link[2]}>Uitleg</ButtonLink>
+        {project.link[0] && <ButtonLink href={project.link[0]}>Code</ButtonLink>}
+
+
+        {project.link[1] && <ButtonLink href={project.link[1]}>Demo</ButtonLink>}
+
+        {project.link[2] && <ButtonLink href={project.link[2]}>Uitleg</ButtonLink>}
       </BoxCard>
 
       <Box>

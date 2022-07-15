@@ -1,12 +1,12 @@
 export const ROUTES = {
   home: { name: "home", route: "/" },
   "over-mij": { name: "over mij", route: "/over-mij" },
-  artikelen: { name: "artikelen", route: "/artikelen" },
+  // artikelen: { name: "artikelen", route: "/artikelen" },
   projects: { name: "projects", route: "/projects" }
 }
 
 export const NAV_ROUTES = [
-  { name: "Artikelen", route: "/artikelen" },
+  // { name: "Artikelen", route: "/artikelen" },
   { name: "Projects", route: "/projects" },
   { name: "Over Mij", route: "/over-mij" }
 ]

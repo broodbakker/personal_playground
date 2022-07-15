@@ -27,9 +27,9 @@ const HomePage = ({ posts, projects }: IHomePage) => {
         <Header />
       </Box>
 
-      <Box margin={{ vertical: "medium" }}>
+      {/* <Box margin={{ vertical: "medium" }}>
         <BasicTable title="Laatste Artikelen" posts={posts} path={ROUTES.artikelen.route} more="Bekijk alle artikelen" />
-      </Box>
+      </Box> */}
 
       <Box margin={{ bottom: "medium" }}>
         <BasicTableProject title="Projecten" posts={projects} path={ROUTES.projects.route} more="Bekijk alle projecten" />
