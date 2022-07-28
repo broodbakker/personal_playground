@@ -1,7 +1,7 @@
 export const ROUTES = {
   home: { name: "home", route: "/" },
   "over-mij": { name: "over mij", route: "/over-mij" },
-  // artikelen: { name: "artikelen", route: "/artikelen" },
+   artikelen: { name: "artikelen", route: "/artikelen" },
   projects: { name: "projecten", route: "/projects" }
 }
 
