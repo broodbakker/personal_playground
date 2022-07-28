@@ -54,7 +54,7 @@ const Card = ({ project }: IProjectCard) => {
   return (
     <CardContainer background="white" pad="small" align="center" border={{ color: 'lightBorderColor', size: 'small' }}>
       <Box margin={{ vertical: "small" }}>
-        <Heading color="headingColor" level="2" size="small">{project.title}</Heading>
+        <Heading color="headingColor" level="2" size="small" textAlign='center'>{project.title}</Heading>
       </Box>
 
       <ImageBox height="xsmall" width="xsmall" margin={{ vertical: "small" }}
@@ -68,7 +68,6 @@ const Card = ({ project }: IProjectCard) => {
 
       <BoxCard direction="row" justify="center" margin={{ vertical: "small" }} fill="horizontal">
         {project.link[0] && <ButtonLink href={project.link[0]}>Code</ButtonLink>}
-
 
         {project.link[1] && <ButtonLink href={project.link[1]}>Demo</ButtonLink>}
 

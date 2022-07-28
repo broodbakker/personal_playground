@@ -14,7 +14,7 @@ import { NavLinks } from "../../typescript"
 
 const NavIcons = {
   Artikelen: <Article />,
-  Projects: <System />,
+  Projecten: <System />,
   "Over Mij": <UserExpert />
 }
 
@@ -41,7 +41,7 @@ const NavLink = ({ navRoute }: NavLinksProps) => {
       </NavIconsContainer>
 
       <Link href={navRoute.route}>
-        <Text color="fontColor" size="small" weight={900}>
+        <Text color="fontColor" size="xsmall" weight={900}>
           <a>
             {navRoute.name}
           </a>

@@ -16,7 +16,7 @@ const Logo = () =>
   <Container >
     <Link href={ROUTES.home.route}>
       <a>
-        <Text color="fontColor" weight={900}>
+        <Text color="fontColor" weight={900} size='small'>
           Martijn van de Ree
         </Text>
       </a>
